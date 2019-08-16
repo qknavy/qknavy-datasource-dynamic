@@ -24,7 +24,7 @@ public class UserController {
     @RequestMapping(value = "/{dbid}/add", method = RequestMethod.POST)
     @Dynamic
     @ResponseBody
-    public String add(@PathVariable(value = "dbid") String dbid, String name, int age, double money){
+    public String add(@DynamicIdentifier @PathVariable(value = "dbid") String dbid, String name, int age, double money){
         User user = new User();
         user.setAge(age);
         user.setMoney(money);
