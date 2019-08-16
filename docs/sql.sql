@@ -4,3 +4,5 @@ INSERT INTO `qknavy-db`.`sys_db_config`(`id`, `type`, `driver-class-name`, `url`
 INSERT INTO `qknavy-db`.`sys_db_config`(`id`, `type`, `driver-class-name`, `url`, `username`, `password`) VALUES ('10002', 'com.alibaba.druid.pool.DruidDataSource', 'com.mysql.jdbc.Driver', 'jdbc:mysql://localhost:3306/DATABASE_NAME?characterEncoding=utf8', 'root', 'P@ssw0rd');
 
 
+CREATE DATABASE `qknavy-db-10001` CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_general_ci';
+CREATE DATABASE `qknavy-db-10002` CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_general_ci';
