@@ -23,24 +23,12 @@ import static org.junit.Assert.*;
 @AutoConfigureMockMvc
 public class UserControllerTest extends BaseTest{
 
-    @Autowired
-    private MockMvc mockMvc;
-    @Autowired
-    private WebApplicationContext webApplicationContext;
-
-    @Before
-    public void before() {
-        //获取mockmvc对象实例
-        mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-    }
-
-
     @Test
     public void add() {
         User user = new User();
-        user.setAge(21);
-        user.setMoney(3800);
-        user.setName("小刘");
+        user.setAge(100);
+        user.setMoney(18800);
+        user.setName("老刘");
         String postBody = JSON.toJSON(user).toString();
         try {
             mockMvc.perform(MockMvcRequestBuilders.post("/users/10001/add")
